@@ -1,0 +1,13 @@
+# IDE
+.vscode/
+.idea/
+
+# build tools
+.xmake/
+
+# build files
+*.o
+*.out
+
+# build directories
+build/
