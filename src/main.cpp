@@ -2,18 +2,19 @@
 #include <getopt.h>
 #include <string>
 #include <arguments_handler.h>
+#include <project_info.h>
 
 int main(int argc, char *argv[])
 {
     auto pstree_options = ArgumentsHandler::HandleArguments(argc, argv);
     if (pstree_options.show_help)
     {
-        ArgumentsHandler::PrintHelp();
+        ProjectInfo::PrintHelp();
         return 0;
     }
     if (pstree_options.show_version)
     {
-        ArgumentsHandler::PrintVersion();
+        ProjectInfo::PrintVersion();
         return 0;
     }
     if (pstree_options.show_pids)

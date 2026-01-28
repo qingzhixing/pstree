@@ -8,23 +8,6 @@
 class ArgumentsHandler
 {
 public:
-	static void PrintHelp()
-	{
-		std::cout << "✨ Usage: " << "pstree" << " [options]\n"
-				  << "Options:\n"
-				  << "  -p, --show-pids       打印每个进程的进程号.\n"
-				  << "  -n, --numeric-sort    按照 pid 的数值从小到大顺序输出一个进程的直接孩子.\n"
-				  << "  -v, --version         打印版本信息.\n"
-				  << "  -h, --help            打印帮助信息.\n";
-	}
-
-	static void PrintVersion()
-	{
-		std::cout << "🌲 pstree: ";
-		std::cout << "把系统中的进程按照父亲-孩子的树状结构打印到终端。 \n";
-		std::cout << "❤️‍🔥 Author: qingzhixing <qzsqqmail@qq.com>\n";
-	}
-
 	struct PstreeOptions
 	{
 		bool show_pids = false;
