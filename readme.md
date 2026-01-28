@@ -3,6 +3,8 @@
 ## ❤️‍🔥 项目信息
 本项目来自 jyy OS 2025 课程的 [M2 实验](https://jyywiki.cn/OS/2025/labs/M2.md)
 
+![Cover](static/Cover.png)
+
 ## 🎵 描述
 把系统中的进程按照父亲-孩子的树状结构打印到终端。  
 
