@@ -16,4 +16,19 @@
 
 ## 🌈 运行效果图
 ![Version Screenshot](static/Version%20Screenshot.png)
+
 ![Usage Screenshot](static/Usage%20Screenshot.png)
+
+## ▶️ 编译及运行
+> 本项目使用 C++ 编写，使用 XMake 进行编译。
+
+👾 普通运行:
+``` bash
+xmake f -p linux -a x86_64 -m debug
+xmake run pstree
+```
+
+🔧 运行测试 (需要准备 `valgrind`，或者请自行修改脚本跳过 `valgrind` 检查的测试) :
+``` bash
+./run_test.py
+```
