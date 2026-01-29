@@ -13,3 +13,7 @@
 * -n 或 --numeric-sort: 按照 pid 的数值从小到大顺序输出一个进程的直接孩子。
 
 * -v 或 --version: 打印版本信息。
+
+## 🌈 运行效果图
+![Version Screenshot](static/Version%20Screenshot.png)
+![Usage Screenshot](static/Usage%20Screenshot.png)
