@@ -4,6 +4,7 @@
 #include <arguments_handler.h>
 #include <project_info.h>
 #include <process_scanner.h>
+#include <pstree_display.h>
 
 int main(int argc, char *argv[])
 {
@@ -18,25 +19,11 @@ int main(int argc, char *argv[])
         ProjectInfo::PrintVersion();
         return 0;
     }
-    if (pstree_options.show_pids)
-    {
-        std::cout << "Showing PIDs is enabled.\n";
-    }
-    if (pstree_options.numeric_sort)
-    {
-        std::cout << "Numeric sort is enabled.\n";
-    }
 
     auto processes = ProcessScanner::ScanProcess();
 
-    // 打印进程信息
-    for (const auto &process : processes)
-    {
-        std::cout << std::format("PID: {}, PPID: {}, Name: {}\n",
-                                 process.pid,
-                                 process.ppid,
-                                 process.process_name);
-    }
+    PstreeDisplay pstree_display(processes);
+    pstree_display.DisplayTree(pstree_options);
 
     return 0;
 }

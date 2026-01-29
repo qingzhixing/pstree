@@ -5,17 +5,17 @@
 #include <string>
 #include <getopt.h>
 
+struct PstreeOptions
+{
+	bool show_pids = false;
+	bool numeric_sort = false;
+	bool show_version = false;
+	bool show_help = false;
+};
+
 class ArgumentsHandler
 {
 public:
-	struct PstreeOptions
-	{
-		bool show_pids = false;
-		bool numeric_sort = false;
-		bool show_version = false;
-		bool show_help = false;
-	};
-
 	/**
 	 * @brief 处理命令行参数
 	 * @param argc 命令行参数数量
